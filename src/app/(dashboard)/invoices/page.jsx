@@ -14,7 +14,7 @@ const headCells = [
   { id: "email", label: "Email" },
   { id: "amount", label: "Amount", numeric: true },
   { id: "status", label: "Status" },
-  { id: "createdAt", label: "Created" },
+  { id: "createdAt", label: "Created at" },
 
 ];
 
