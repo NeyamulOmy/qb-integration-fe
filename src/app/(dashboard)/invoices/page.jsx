@@ -171,7 +171,7 @@ export default function InvoicesPage() {
               </TableRow>
             ))}
 
-            {filteredSorted.length === 0 && (
+            {rows.length > 0 && filteredSorted.length === 0 && (
               <TableRow>
                 <TableCell colSpan={7}>
                   <Box py={4} textAlign="center" color="text.secondary">
