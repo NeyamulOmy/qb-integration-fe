@@ -9,13 +9,13 @@ import {
 } from "@mui/material";
 
 const headCells = [
-  { id: "id", label: "ID", numeric: true },
+  { id: "qboInvoiceId", label: "Invoice Id" },
   { id: "clientName", label: "Client" },
   { id: "email", label: "Email" },
   { id: "amount", label: "Amount", numeric: true },
   { id: "status", label: "Status" },
   { id: "createdAt", label: "Created" },
-  { id: "qboInvoiceId", label: "QBO Id" },
+
 ];
 
 export default function InvoicesPage() {
@@ -55,8 +55,7 @@ export default function InvoicesPage() {
       normalize(r.email).includes(s) ||
       normalize(r.status).includes(s) ||
       normalize(r.amount).includes(s) ||
-      normalize(r.qboInvoiceId).includes(s) ||
-      normalize(r.id).includes(s)
+      normalize(r.qboInvoiceId).includes(s)
     );
   };
 
@@ -156,7 +155,7 @@ export default function InvoicesPage() {
           <TableBody>
             {paged.map((r) => (
               <TableRow key={r.id} hover>
-                <TableCell align="right">{r.id}</TableCell>
+                <TableCell>{r.qboInvoiceId || "-"}</TableCell>
                 <TableCell>{r.clientName}</TableCell>
                 <TableCell>{r.email}</TableCell>
                 <TableCell align="right">{r.amount}</TableCell>
@@ -164,12 +163,11 @@ export default function InvoicesPage() {
                   <Chip
                     size="small"
                     label={r.status}
-                    color={r.status === "Paid" ? "success" : "default"}
+                    color={r.status === "Paid" ? "success" : "warning"}
                     variant={r.status === "Paid" ? "filled" : "outlined"}
                   />
                 </TableCell>
                 <TableCell>{new Date(r.createdAt).toLocaleString()}</TableCell>
-                <TableCell>{r.qboInvoiceId || "-"}</TableCell>
               </TableRow>
             ))}
 
