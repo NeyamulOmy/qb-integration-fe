@@ -88,7 +88,7 @@ export default function InvoicesPage() {
 
   const filteredSorted = useMemo(() => {
     const q = query.trim();
-    const data = rows.filter((r) => matchesQuery(r, q));
+    const data = rows?.filter((r) => matchesQuery(r, q));
     const comparator = getComparator(order, orderBy);
 
 
