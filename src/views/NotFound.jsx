@@ -46,7 +46,7 @@ const NotFound = ({ mode }) => {
           <Typography>we couldn&#39;t find the page you are looking for.</Typography>
         </div>
         <Button href='/' component={Link} variant='contained'>
-          Back To Home
+          Back To Invoices
         </Button>
         <img
           alt='error-404-illustration'

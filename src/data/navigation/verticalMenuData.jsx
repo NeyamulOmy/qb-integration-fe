@@ -1,13 +1,13 @@
 const verticalMenuData = () => [
   {
-    label: 'Home',
-    href: '/home',
-    icon: 'tabler-smart-home'
+    label: 'Invoices',
+    href: '/invoices',
+    icon: 'tabler-file-invoice'
   },
   {
-    label: 'About',
-    href: '/about',
-    icon: 'tabler-info-circle'
+    label: 'Create Invoice',
+    href: '/create-invoice',
+    icon: 'tabler-playlist-add'
   }
 ]
 
